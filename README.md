@@ -12,4 +12,5 @@ brew install node
 brew install watchexec # watch for file changes
 
 npm run dev
+open "http://localhost:8080"
 ```
