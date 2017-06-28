@@ -1,5 +1,6 @@
 import choo from "choo"
 import html from "choo/html"
+import trim from "1-liners/module/trim"
 
 
 // 🎒 App
@@ -16,9 +17,9 @@ app.mount("body")
 // 🌳 State
 
 
-function storage (_, emitter) {
+function storage (state, emitter) {
   // initial state
-  return {}
+  state.msg = "Sup?"
 }
 
 
@@ -29,7 +30,7 @@ function storage (_, emitter) {
 function indexView (state, emit) {
   return html`
     <body>
-      <h1>Hi!</h1>
+      <h1>${ trim(state.msg) }</h1>
     </body>
   `
 }
